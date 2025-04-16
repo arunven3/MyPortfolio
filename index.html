@@ -100,7 +100,7 @@
               <li>
                 <div class="skill-bar-title">Front End Technologies</div>
                 <div class="descr">
-                  <div class="row skill-container">
+                  <div class="skill-container">
                     <div class="skills">
                       <div class="devicon-html5-plain-wordmark skill-icon colored"> </div>
                     </div>
@@ -141,7 +141,7 @@
               <li>
                 <div class="skill-bar-title">Back End Technologies</div>
                 <div class="descr">
-                  <div class="row skill-container">
+                  <div class="skill-container">
                     <div class="skills">
                       <div class="devicon-php-plain colored"> </div>
                     </div>
@@ -172,7 +172,7 @@
               <li>
                 <div class="skill-bar-title">Database Services</div>
                 <div class="descr">
-                  <div class="row skill-container">
+                  <div class="skill-container">
                     <div class="skills">
                       <div class="devicon-mysql-plain-wordmark colored"> </div>
                     </div>
@@ -185,7 +185,7 @@
               <li>
                 <div class="skill-bar-title">Cloud Services</div>
                 <div class="descr">
-                  <div class="row skill-container">
+                  <div class="skill-container">
                     <div class="skills">
                       <div class="devicon-amazonwebservices-plain-wordmark"> </div>
                     </div>
@@ -204,7 +204,7 @@
               <li>
                 <div class="skill-bar-title">Version Control</div>
                 <div class="descr">
-                  <div class="row skill-container">
+                  <div class="skill-container">
                     <div class="skills">
                       <div class="devicon-git-plain-wordmark colored"> </div>
                     </div>
@@ -226,53 +226,31 @@
             <div>Contact Me</div>
           </div>
           <div>
-            <span>
-              Join me on this journey through the world of web development.<br><br>
-              Together, we'll craft pieces of software that stand out, leave a lasting impression, and bring your ideas
-              to life.
-              lets us create magic on software products.
-            </span>
           </div>
-          <div class="row">
-            <div class="right-content">
-              <div class="">
-                <form id="contact" action="" method="post">
-                  <div class="row">
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input name="name" type="text" class="form-control" id="name" placeholder="Your name..."
-                          required="" />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-6">
-                      <fieldset>
-                        <input name="email" type="text" class="form-control" id="email" placeholder="Your email..."
-                          required="" />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <input name="subject" type="text" class="form-control" id="subject" placeholder="Subject..."
-                          required="" />
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <textarea name="message" rows="6" class="form-control" id="message"
-                          placeholder="Your message..." required=""></textarea>
-                      </fieldset>
-                    </div>
-                    <div class="col-md-12">
-                      <fieldset>
-                        <button type="submit" id="form-submit" class="button">
-                          Send Message
-                        </button>
-                      </fieldset>
-                    </div>
-                  </div>
-                </form>
+          <div>
+            <div class="container">
+              <div>
+                Join with me create magic on software products.
               </div>
+            <div class="form__group field">
+              <input type="input" class="form__field" placeholder="Name" name="name" id="name" required />
+              <label for="name" class="form__label">Name</label>
             </div>
+            <div class="form__group field">
+              <input type="input" class="form__field" placeholder="email" name="EMail" id="EMail" required />
+              <label for="EMail" class="form__label">Email</label>
+            </div>
+            <div class="form__group field">
+              <input type="input" class="form__field" placeholder="message" name="message" id="message" required />
+              <label for="message" class="form__label">Message</label>
+            </div>
+            <div class="form__group field">
+              <button class="button">
+                Send
+              </button>
+            </div>
+            </div>
+            
           </div>
         </div>
       </section>
@@ -285,56 +263,6 @@
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/custom.js"></script>
-  <script>
-    //according to loftblog tut
-    $(".main-menu li:first").addClass("active");
-
-    var showSection = function showSection(section, isAnimate) {
-      var direction = section.replace(/#/, ""),
-        reqSection = $(".section").filter(
-          '[data-section="' + direction + '"]'
-        ),
-        reqSectionPos = reqSection.offset().top - 0;
-
-      if (isAnimate) {
-        $("body, html").animate(
-          {
-            scrollTop: reqSectionPos
-          },
-          800
-        );
-      } else {
-        $("body, html").scrollTop(reqSectionPos);
-      }
-    };
-
-    var checkSection = function checkSection() {
-      $(".section").each(function () {
-        var $this = $(this),
-          topEdge = $this.offset().top - 80,
-          bottomEdge = topEdge + $this.height(),
-          wScroll = $(window).scrollTop();
-        if (topEdge < wScroll && bottomEdge > wScroll) {
-          var currentId = $this.data("section"),
-            reqLink = $("a").filter("[href*=\\#" + currentId + "]");
-          reqLink
-            .closest("li")
-            .addClass("active")
-            .siblings()
-            .removeClass("active");
-        }
-      });
-    };
-
-    $(".main-nav").on("click", "a", function (e) {
-      e.preventDefault();
-      showSection($(this).attr("href"), true);
-    });
-
-    $(window).scroll(function () {
-      checkSection();
-    });
-  </script>
 </body>
 
 </html>

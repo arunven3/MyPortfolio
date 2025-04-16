@@ -842,11 +842,23 @@ section.contact-me {
 
 
 
-.skill-section {
+.skill-section, section.contact-me {
     padding-top: 40px;
 }
 
+section.contact-me {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
 .skill-container {
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 40px;
     column-gap: 20px;
     row-gap: 40px; 
@@ -1019,7 +1031,65 @@ section.contact-me {
     grid-column: 2 !important; /* force everything on the left side */
   }
   
-
+  .form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--white);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--white);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+  }
+  .form__field::placeholder {
+    color: transparent;
+  }
+  .form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+  
+  .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--white);
+  }
+  
+  .form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    /* border-image: linear-gradient(to right, #11998e, #38ef7d);
+    border-image-slice: 1; */
+  }
+  .form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: #11998e;
+    font-weight: 700;
+  }
+  
+  /* reset input */
+  .form__field:required, .form__field:invalid {
+    box-shadow: none;
+  }
+  
 
 /* .html5-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e44f26' d='M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30z'/%3E%3Cpath fill='%23f1662a' d='m16 27.858l8.17-2.265l1.922-21.532H16z'/%3E%3Cpath fill='%23ebebeb' d='M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004z'/%3E%3Cpath fill='%23fff' d='M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83z'/%3E%3C/svg%3E");
