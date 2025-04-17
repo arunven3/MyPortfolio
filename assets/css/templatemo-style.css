@@ -1354,4 +1354,39 @@ color .skill-bar ul li .title,
     .isotope-toolbar {
         margin-bottom: 20px;
     }
+
+    .list ul {
+        grid-template-columns: auto auto;
+
+    }
+
+    .skills {
+        min-height: 55px;
+        padding: 15px;
+    }
+
+    .skills > div {
+        font-size: 40px;
+    }
+
+    .skills .devicon-angularjs-plain-wordmark,
+    .skills .devicon-angular-plain-wordmark,
+    .skills .devicon-laravel-original-wordmark,
+    .skills .devicon-nestjs-original-wordmark,
+    .skills .devicon-cloudflare-plain-wordmark,
+    .skills .devicon-googlecloud-plain-wordmark {
+        line-height: 0;
+        font-size: 60px;
+        margin-top: 12px;
+    }
+
+    .skills .devicon-git-plain-wordmark,
+    .skills .devicon-digitalocean-original-wordmark,
+    .skills .devicon-sqlite-plain-wordmark,
+    .skills .devicon-mysql-plain-wordmark,
+    .skills .devicon-express-original-wordmark {
+        line-height: 0;
+        font-size: 50px;
+        margin-top: 10px;
+    }
 }
