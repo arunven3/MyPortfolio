@@ -50,10 +50,6 @@ h4 {
     letter-spacing: 0.25px;
 }
 
-.bb-3 {
-    border-bottom: 3px solid var(--page-content-background);
-}
-
 img {
     width: 100%;
     overflow: hidden;
@@ -90,8 +86,6 @@ img {
     text-align: center;
     font-size: 3rem;
     width: 100%;
-    /* border-bottom: 5px solid var(--white); */
-
 }
 
 .white-button {
@@ -101,7 +95,6 @@ img {
     font-weight: bold;
     z-index: 2;
     text-align: center;
-    /* font-size: 2rem; */
     width: 100%;
 }
 
@@ -163,10 +156,6 @@ html {
 
 .main-nav {
     text-align: center;
-}
-
-.main-nav li:last-child a {
-    /*border-bottom: 2px solid #fff;*/
 }
 
 .main-nav li {
@@ -866,13 +855,13 @@ section.experience {
 }
 
 section.contact-me {
-    display: flex;
+    /* display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
     align-items: center;
-    padding-bottom: 40px;
+    padding-bottom: 40px; */
 }
 
 .skill-container {
@@ -1171,6 +1160,47 @@ color .skill-bar ul li .title,
 }
 
 
+.contact-details {
+    display: grid;
+    justify-content: center;
+    /* grid-template-columns: auto auto; */
+}
+
+.contact-details .contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    background: var(--primary-color);
+}
+
+.contact-details .contact-info {
+    display: grid;
+    grid-template-columns: 65px auto;
+    align-items: center;
+    row-gap: 30px;
+}
+
+.contact-details .contact-info  div{
+    font-size: 18px;
+}
+
+.contact-information {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.contact-details .contact-info  a {
+    color: var(--white);
+}
+
+.contact-details .contact-info .heading {
+    font-weight: bold;
+}
 
 /* .html5-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23e44f26' d='M5.902 27.201L3.655 2h24.69l-2.25 25.197L15.985 30z'/%3E%3Cpath fill='%23f1662a' d='m16 27.858l8.17-2.265l1.922-21.532H16z'/%3E%3Cpath fill='%23ebebeb' d='M16 13.407h-4.09l-.282-3.165H16V7.151H8.25l.074.83l.759 8.517H16zm0 8.027l-.014.004l-3.442-.929l-.22-2.465H9.221l.433 4.852l6.332 1.758l.014-.004z'/%3E%3Cpath fill='%23fff' d='M15.989 13.407v3.091h3.806l-.358 4.009l-3.448.93v3.216l6.337-1.757l.046-.522l.726-8.137l.076-.83zm0-6.256v3.091h7.466l.062-.694l.141-1.567l.074-.83z'/%3E%3C/svg%3E");
@@ -1365,7 +1395,7 @@ color .skill-bar ul li .title,
         padding: 15px;
     }
 
-    .skills > div {
+    .skills>div {
         font-size: 40px;
     }
 
@@ -1377,7 +1407,7 @@ color .skill-bar ul li .title,
     .skills .devicon-googlecloud-plain-wordmark {
         line-height: 0;
         font-size: 60px;
-        margin-top: 12px;
+        margin-top: 17px;
     }
 
     .skills .devicon-git-plain-wordmark,
@@ -1387,6 +1417,6 @@ color .skill-bar ul li .title,
     .skills .devicon-express-original-wordmark {
         line-height: 0;
         font-size: 50px;
-        margin-top: 10px;
+        margin-top: 14px;
     }
 }
