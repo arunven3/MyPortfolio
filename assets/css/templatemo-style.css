@@ -1391,12 +1391,12 @@ color .skill-bar ul li .title,
     }
 
     .skills {
-        min-height: 55px;
+        min-height: 58px;
         padding: 15px;
     }
 
     .skills>div {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     .skills .devicon-angularjs-plain-wordmark,
@@ -1406,8 +1406,8 @@ color .skill-bar ul li .title,
     .skills .devicon-cloudflare-plain-wordmark,
     .skills .devicon-googlecloud-plain-wordmark {
         line-height: 0;
-        font-size: 60px;
-        margin-top: 17px;
+        font-size: 65px;
+        margin-top: 19px;
     }
 
     .skills .devicon-git-plain-wordmark,
@@ -1416,7 +1416,7 @@ color .skill-bar ul li .title,
     .skills .devicon-mysql-plain-wordmark,
     .skills .devicon-express-original-wordmark {
         line-height: 0;
-        font-size: 50px;
-        margin-top: 14px;
+        font-size: 55px;
+        margin-top: 16px;
     }
 }
